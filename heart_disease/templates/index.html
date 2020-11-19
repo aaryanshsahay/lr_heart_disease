@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+    <head>
+        <style type="text/css">
+            .form-style-4{
+    width: 100%;
+    font-size: 16px;
+    background: #495C70;
+    padding: 30px 30px 15px 30px;
+    border: 5px solid #53687E;
+}
+
+.form-style-4 input[type=submit],
+.form-style-4 input[type=button],
+.form-style-4 input[type=text],
+.form-style-4 input[type=float],
+.form-style-4 input[type=integer],
+.form-stype-4 textarea,
+.form-style-4 label
+{
+    font-family: Georgia , "Times New Roman",Times,serif;
+    font-size: 16px;
+    color:#fff;
+}
+
+.form-style-4 label{
+    display: block;
+    margin-bottom: 10px;
+}
+
+.form-style-4 label>span {
+    display: inline-block;
+    float: left;
+    width: 74%;
+}
+
+.form-style-4 input[type=text],
+.form-style-4 input[type=float],
+.form-style-4 input[type=integer]
+{
+    background: transparent;
+    border: none;
+    border-bottom: 1px dashed #83A4C5;
+    width: 100%;
+    outline: none;
+    padding: 0px 0px 0px 0px;
+    font-style: italic;
+
+}
+.form-style-4 textarea{
+    font-style: italic;
+    padding: 0px 0px 0px 0px;
+    background: transparent;
+    outline: none;
+    border: none;
+    border-bottom: 1px dashed #83A4C5;
+    width: 275px;
+    overflow: hidden;
+    resize: none;
+    height: 20px;
+}
+
+.form-style-4 textarea:focus,
+.form-style-4 input[type=text]:focus,
+.form-style-4 input[type=float]:focus,
+.form-style-4 input[type=integer]:focus,
+{
+    border-bottom: 1px dashed #D9FFA9;
+}
+
+.form-style-4 input[type=submit],
+.form-style-4 input[type=button]{
+    background: #576E86;
+    border: none;
+    padding: 8px 10px 8px 10px;
+    border-radius: 5px;
+    color: #A8BACE;
+}
+
+.form-style-4 input[type=submit]:hover,
+.form-style-4 input[type=button]:hover{
+    background: #394D61;
+}
+
+.error-box{
+    border: dashed;
+    padding: 10px 10px 10px 10px;
+    color: #A8BACE;
+}
+        </style>
+
+    </head>
+    <body>
+        <form class="form-style-4" method=post enctype=multipart/form-data>
+            <label for="field1">
+            <span>Enter Your Age:</span>
+        	<input type="integer" id="user_age" name="user_age" required="true"/>
+        </label><label for="field2">
+            <span>What is your gender(Male/Female)?</span>
+        	<input type="text" id="user_gender" name="user_gender" required="true">
+            </label><label for="field3">
+            <span>Do you Smoke(Yes/No)?</span>
+        	<input type="text" id="user_smoker" name="user_smoker" required="true">
+        </label><label for="field4">
+        	<span>How many cigarettes do you smoke every day(0 if you don't smoke)?</span>
+        	<input type="integer" id="user_no_cigs" name="user_no_cigs" required="true">
+        </label><label for="field5">
+            <span>Are you on any BloodPressure meds?</span>
+        	<input type="text" id="user_bp_meds" name="user_bp_meds" required="true">
+        </label><label for="field6">
+            <span>Have you ever experienced a stroke?</span>
+        	<input type="text" name="user_prev_stroke" name="user_prev_stroke" required="true">
+        </label><label for="field7">
+            <span>Do you have diabetes?</span>
+        	<input type="text" id="user_diab" name="user_diab" required="true">
+        </label><label for="field8">
+            <span>What is your total cholestrol?</span>
+        	<input type="integer" id="user_chol" name="user_chol" required="true">
+        </label><label for="field9">
+            <span>What is your systolic blood Pressure?</span>
+        	<input type="float" id="user_sys_bp" name="user_sys_bp" required="true">
+        </label><label for="field10">
+            <span>What is your Diastolic blood Pressure?</span>
+        	<input type="float" id="user_dia_bp" name="user_dia_bp" required="true">
+        </label><label for="field11">
+            <span>What is your BodyMassIndex(BMI)?</span>
+        	<input type="float" id="user_bmi" name="user_bmi" required="true">
+        </label><label for="field12">
+            <span>What is your Heartrate?</span>
+        	<input type="integer" id="user_heartrate" name="user_heartrate" required="true">
+        </label><label for="field13">
+            <span>What is your glucose level?</span>
+        	<input type="integer" id="user_glucose" name="user_glucose" required="true">
+        </label><label>
+        	<input type="submit" value="Submit">
+            </label>
+        </form>
+        
+        {{ errormsg }}
+        
+    </body>
+</html>
